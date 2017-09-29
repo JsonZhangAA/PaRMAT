@@ -98,7 +98,7 @@ int main( int argc, char ** argv ) {
 				directedGraph = false;
 		}
 
-		if( nVertices == 0 || nEdges == 0 || nEdges >= nVertices*nVertices )
+		if( nVertices == 0 || nEdges == 0 || ((nEdges >= nVertices*nVertices)&&(nVertices*nVertices>nVertices) ))
 			throw std::runtime_error( "Number of edges or number of vertices are not specified (correctly)." );
 
 		if( !outf.is_open() )
